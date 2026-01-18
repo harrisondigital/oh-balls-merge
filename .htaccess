@@ -1,0 +1,11 @@
+<IfModule mod_headers.c>
+  # Short cache for HTML, service worker and manifest (1 hour)
+  <FilesMatch "(\.html?|sw\.js|manifest\.json)$">
+    Header set Cache-Control "max-age=3600, must-revalidate"
+  </FilesMatch>
+  
+  # Long cache for static assets (1 year)
+  <FilesMatch "\.(mp3|png|jpg|jpeg|gif|svg|css|js|woff|woff2|ico|webp)$">
+    Header set Cache-Control "max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
