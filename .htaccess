@@ -1,3 +1,6 @@
+Options -Indexes
+DirectoryIndex index.html
+
 <IfModule mod_headers.c>
   # Short cache for HTML, service worker and manifest (1 hour)
   <FilesMatch "(\.html?|sw\.js|manifest\.json)$">
